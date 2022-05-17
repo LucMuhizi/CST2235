@@ -2,5 +2,12 @@
 <resources>
     <string name="app_name">Lab1</string>
     <string name="hello_message">Mumbo </string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="ButtonText">Meme Apa Button</string>
+    <string name= "header">Angalia GUI yangu</string>
+    <string name ="clickHere" > Bonyeza hapa</string>
+    <string name="checkhere">Angalia hii!</string>
+    <string name= "switchOn">Washa / zima</string>
+    <string name="type">Andika hapa</string>
+    <string name="toast_message">Here is more information</string>
+
 </resources>
