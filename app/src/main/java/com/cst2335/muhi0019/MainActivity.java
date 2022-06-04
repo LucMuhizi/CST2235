@@ -26,13 +26,11 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String toast_message = MainActivity.this.getResources().getString(R.string.toast_message)
+                String toast_message = MainActivity.this.getResources().getString(R.string.toast_message);
                 Toast.makeText( MainActivity.this,  "Here is more information", Toast.LENGTH_LONG).show();
             }
         });
 
-        switch2 = findViewById(R.id.switch2);
-        switch2.onChecked
 
     }
 }
