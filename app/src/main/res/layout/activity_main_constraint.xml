@@ -57,7 +57,7 @@
 
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
-        android:text="MultiAutoCompleteTextView"
+        android:text="Enter Name Here"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="494dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
