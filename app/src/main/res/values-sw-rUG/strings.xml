@@ -8,6 +8,22 @@
     <string name="checkhere">Angalia hii!</string>
     <string name= "switchOn">Washa / zima</string>
     <string name="type">Andika hapa</string>
-    <string name="toast_message">Here is more information</string>
+    <string name="toast_message">Hapa kuna habari zaidi</string>
+    <string name="Lab3TextView1">Weka barua pepe yako:</string>
+    <string name="Lab3TextView2">Enter your password:</string>
+    <string name="Lab3EmailHint">Weka nenosiri lako:</string>
+    <string name="Lab3LoginBtnText">Ingia</string>
+    <string name="ProfileText">Wasifu wako</string>
+    <string name="NameText">Jina lako:</string>
+    <string name="NameHintText">Enter your name</string>
+    <string name="EmailTextViewText">Barua pepe yako:</string>
+    <string name="EmailHintText">Weka barua pepe yako</string>
+    <string name="PictureTextView">Picha yako:</string>
+    <string name="ImagePictureTextView">Bofya kitufe hapo juu ili kupiga picha</string>
+    <string name="GoToChatText">Nenda kwa Gumzo</string>
+    <string name="SendText">Tuma</string>
+    <string name="ReceiveText">Pokea</string>
+    <string name="ChatHint">Andika hapa</string>
+
 
 </resources>

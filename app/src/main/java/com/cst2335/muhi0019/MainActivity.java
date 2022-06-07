@@ -1,36 +1,56 @@
 package com.cst2335.muhi0019;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-import android.widget.Toast;
+import android.widget.EditText;
 
-import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button5;
-    private Switch switch2;
 
-
+    EditText emailField;
+    SharedPreferences sp;
+    Button loginBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_constraint);
+        setContentView(R.layout.activity_main_lab3);
 
-        button5 = findViewById(R.id.button5);
+        emailField = (EditText)findViewById(R.id.Lab3editText2);
+        sp = getSharedPreferences("FileName", Context.MODE_PRIVATE);
+        String savedString = sp.getString("ReserveName", "Default value");
 
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String toast_message = MainActivity.this.getResources().getString(R.string.toast_message);
-                Toast.makeText( MainActivity.this,  "Here is more information", Toast.LENGTH_LONG).show();
-            }
+        emailField.setHint(savedString);
+
+        loginBtn = (Button)findViewById(R.id.Lab3LoginBtn);
+        loginBtn.setOnClickListener( c -> {
+            Intent profilePage = new Intent(MainActivity.this, ProfileActivity.class);
+
+
+            profilePage.putExtra("emailTyped", emailField.getText().toString());
+
+
         });
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
 
+        //get an editor object
+        SharedPreferences.Editor editor = sp.edit();
+
+        //save what was typed under the name "ReserveName"
+        String whatWasTyped = emailField.getText().toString();
+        editor.putString("ReserveName", whatWasTyped);
+
+        //write it to disk:
+        editor.commit();
     }
 }
+
+
