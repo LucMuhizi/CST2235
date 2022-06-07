@@ -31,9 +31,8 @@ public class MainActivity extends AppCompatActivity {
             Intent profilePage = new Intent(MainActivity.this, ProfileActivity.class);
 
 
-            profilePage.putExtra("emailTyped", emailField.getText().toString());
-
-
+           Intent: profilePage.putExtra("emailTyped", emailField.getText().toString());
+            startActivity(profilePage);
         });
     }
 

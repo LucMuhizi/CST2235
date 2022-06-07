@@ -15,42 +15,43 @@
         android:textAlignment="center"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="50dp" />
+        tools:layout_editor_absoluteY="50dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/flag"
+        android:contentDescription="@string/clickHere"
 
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
+        app:srcCompat="@drawable/flag"
         tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="155dp" />
+        tools:layout_editor_absoluteY="155dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Click Here"
 
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="352dp" />
+        tools:layout_editor_absoluteY="352dp"
+        tools:ignore="MissingConstraints" />
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="108dp"
-        android:layout_height="42dp"
-        android:text="Switch"
+        android:layout_width="134dp"
+        android:layout_height="44dp"
+        android:text="Switch on/off"
 
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        tools:layout_editor_absoluteX="250dp"
-        tools:layout_editor_absoluteY="356dp" />
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="354dp"
+        tools:ignore="MissingConstraints" />
 
-    <MultiAutoCompleteTextView
+    <TextView
         android:id="@+id/multiAutoCompleteTextView"
         android:layout_width="322dp"
         android:layout_height="134dp"
@@ -59,5 +60,6 @@
         android:layout_marginRight="2dp"
         android:text="Enter Name Here"
         tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="494dp" />
+        tools:layout_editor_absoluteY="494dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
