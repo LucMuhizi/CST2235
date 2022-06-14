@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.List;
 
-public class ChatAdapter extends AppCompatActivity {
+public class ChatAdapter extends BaseAdapter {
 
     private List<MessageModel> messageModels;
     private Context context;
