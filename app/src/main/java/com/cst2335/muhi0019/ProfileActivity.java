@@ -1,6 +1,7 @@
 package com.cst2335.muhi0019;
 
 import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.graphics.Bitmap;
@@ -67,7 +68,12 @@ public class ProfileActivity extends AppCompatActivity {
                 myPictureTakerLauncher.launch(takePictureIntent);}
 
         });
+        goToChatBtn = (Button) findViewById(R.id.GoToChatBtn);
+        goToChatBtn.setOnClickListener(c -> {
+            Intent goToChatPage = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+            startActivityForResult(goToChatPage, 345);
 
+        });
 
 
 
