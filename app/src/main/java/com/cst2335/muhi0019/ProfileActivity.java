@@ -23,31 +23,12 @@ public class ProfileActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     ImageButton takePictureBtn;
     Button goToChatBtn;
-    public static final String TAG = "PROFILE_ACTIVITY";
+    public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Log.e(TAG, "In funtion: onCreate");
-
-        ActivityResultLauncher<Intent> myPictureTakerLauncher =
-                registerForActivityResult( new ActivityResultContracts.StartActivityForResult()
-                        ,new ActivityResultCallback<ActivityResult>() {
-
-
-                            @Override
-                            public void onActivityResult(ActivityResult result) {
-                                if (result.getResultCode() == Activity.RESULT_OK)
-                                { Intent data = result.getData();
-                                    Bitmap imgbitmap = (Bitmap) data.getExtras().get("data");
-                                    ImageView imgView = null;
-                                    imgView.setImageBitmap(imgbitmap); // the imageButton
-                                }
-                                else if(result.getResultCode() == Activity.RESULT_CANCELED)
-                                    Log.i(TAG, "User refused to capture a picture.");
-                            }
-                        } );
 
         // get the intent that got us here
         Intent loginPage = getIntent();
@@ -64,47 +45,66 @@ public class ProfileActivity extends AppCompatActivity {
 
             Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-
-                myPictureTakerLauncher.launch(takePictureIntent);}
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+            }
 
         });
-        goToChatBtn = (Button) findViewById(R.id.GoToChatBtn);
+
+        goToChatBtn = (Button)findViewById(R.id.GoToChatBtn);
         goToChatBtn.setOnClickListener(c -> {
             Intent goToChatPage = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+
             startActivityForResult(goToChatPage, 345);
 
         });
 
 
+        Log.d(ACTIVITY_NAME, "In function: onCreate()");
+
 
     }
 
-
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            takePictureBtn.setImageBitmap(imageBitmap);
+        }
+        Log.d(ACTIVITY_NAME, "In function: onActivityResult()");
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(TAG, "In function: onStart()");
+        Log.d(ACTIVITY_NAME, "In function: onStart()");
     }
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(TAG, "In function: onStart()");
+        Log.d(ACTIVITY_NAME, "In function: onResume()");
     }
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(TAG, "In function: onStart()");
+        Log.d(ACTIVITY_NAME, "In function: onPause()");
     }
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(TAG, "In function: onStart()");
+        Log.d(ACTIVITY_NAME, "In function: onStop()");
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(TAG, "In function: onStart()");
+        Log.d(ACTIVITY_NAME, "In function: onDestroy()");
     }
 }
+
+
+
+
+
+
+

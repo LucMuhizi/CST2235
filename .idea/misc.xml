@@ -5,9 +5,14 @@
       <map>
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/drawable/receive_message.xml" value="0.1" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/drawable/send_message.xml" value="0.1" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_database_helper.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main.xml" value="0.1082427536231884" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_chatroom.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_constraint.xml" value="0.1082427536231884" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_lab3.xml" value="0.1082427536231884" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_receive.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_send.xml" value="0.1" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_message_model.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/Users/muhiz/AndroidStudioProjects/AndroidLabs2/app/src/main/res/drawable-mcc256/drawable_ca.xml" value="0.1" />
         <entry key="..\:/Users/muhiz/AndroidStudioProjects/AndroidLabs2/app/src/main/res/layout/activity_main.xml" value="0.25" />

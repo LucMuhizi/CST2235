@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MessageModel extends AppCompatActivity {
     public String message;
     public boolean isSend;
+    public long messageID;
 
     public MessageModel(String message, boolean isSend) {
         this.message = message;
@@ -29,4 +30,14 @@ public class MessageModel extends AppCompatActivity {
     public void setSend(boolean send) {
         isSend = send;
     }
+
+    public long getMessageID() {
+        return messageID;
+    }
+
+    public void setMessageID(long messageID) {
+        this.messageID = messageID;
+    }
+
+
 }
