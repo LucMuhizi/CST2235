@@ -1,26 +1,49 @@
 <resources>
-    <string name="app_name">AndroidLabs</string>
-    <string name="hello_message">Hello World</string>
-    <string name="ButtonText">I\’m a button</string>
-    <string name="header">Look at my GUI</string>
-    <string name="clickHere"> Click Here</string>
-    <string name="checkhere">Check this out!</string>
-    <string name="switchOn">Switch on / off</string>
-    <string name="type">Type Here</string>
+    <string name="app_name">Android Labs</string>
+    <string name="hello_message">Look at my GUI</string>
+    <string name="ButtonText">Click Here</string>
+    <string name="CheckBoxText">Check this out!</string>
+    <string name="SwitchText">Switch on/off</string>
+    <string name="EditHint">Type Here</string>
     <string name="toast_message">Here is more information</string>
+    <string name="enter_email">Enter your email address:</string>
+    <string name="EmailHint">Type email here</string>
+    <string name="enter_password">Type your password:</string>
+    <string name="Profile_text">Your profile</string>
+    <string name="Name_hint">Enter your name</string>
+    <string name="Name_text">Your name:</string>
+    <string name="Email_text">Your email:</string>
+    <string name="Picture_text">Your picture:</string>
+    <string name="EmailHint2">Enter your email</string>
+    <string name="ClickButtonText">Click the button above to take a picture</string>
+    <string name="GoToChat">Go To ChatRoom</string>
+    <string name="Sendbtn">SEND</string>
+    <string name="Receivebtn">RECEIVE</string>
+    <string name="delete">Do you want to delete this?</string>
+    <string name="row">The selected row is: </string>
+    <string name="database">The database id is: </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="todo">TODO</string>
+
+    <string name="SendText">Send</string>
+    <string name="ReceiveText">Receive</string>
+    <string name="ChatHint">Type here</string>
+    <string name="clickHere"> Click Here</string>
+
     <string name="Lab3TextView1">Enter your email address:</string>
     <string name="Lab3TextView2">Enter your password:</string>
     <string name="Lab3EmailHint">Type email here:</string>
     <string name="Lab3LoginBtnText">Login</string>
-    <string name="ProfileText">Your profile</string>
-    <string name="NameText">Your name:</string>
-    <string name="NameHintText">Enter your name</string>
-    <string name="EmailTextViewText">Your email:</string>
-    <string name="EmailHintText">Enter your email</string>
-    <string name="PictureTextView">Your picture:</string>
-    <string name="ImagePictureTextView">Click the button above to take a picture</string>
-    <string name="GoToChatText">Go To Chat</string>
-    <string name="SendText">Send</string>
-    <string name="ReceiveText">Receive</string>
-    <string name="ChatHint">Type here</string>
+
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

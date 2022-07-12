@@ -1,110 +1,92 @@
 package com.cst2335.muhi0019;
 
-import android.app.Activity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.provider.MediaStore;
-import android.widget.ImageView;
-
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    ImageButton takePictureBtn;
-    Button goToChatBtn;
-    public static final String TAG = "PROFILE_ACTIVITY";
+    public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
+    ImageButton imageButton;
+    Button chatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Log.e(TAG, "In funtion: onCreate");
 
-        ActivityResultLauncher<Intent> myPictureTakerLauncher =
-                registerForActivityResult( new ActivityResultContracts.StartActivityForResult()
-                        ,new ActivityResultCallback<ActivityResult>() {
+        Intent intent = getIntent(); //gets the object nextActivity from MainActivity.java
+        String email = intent.getStringExtra("Email");
 
+        //put the string that was sent from Mainactivity into the edit text
+        EditText enterText = findViewById(R.id.editTextTextEmailAddress2);
+        enterText.setText(email);
 
-                            @Override
-                            public void onActivityResult(ActivityResult result) {
-                                if (result.getResultCode() == Activity.RESULT_OK)
-                                { Intent data = result.getData();
-                                    Bitmap imgbitmap = (Bitmap) data.getExtras().get("data");
-                                    ImageView imgView = null;
-                                    imgView.setImageBitmap(imgbitmap); // the imageButton
-                                }
-                                else if(result.getResultCode() == Activity.RESULT_CANCELED)
-                                    Log.i(TAG, "User refused to capture a picture.");
-                            }
-                        } );
-
-        // get the intent that got us here
-        Intent loginPage = getIntent();
-
-        String emailTyped = loginPage.getStringExtra("emailTyped");
-
-        //Put the string that was sent from FirstActivity into the edit text:
-        EditText enterText = (EditText) findViewById(R.id.EmailEditText);
-        enterText.setText(emailTyped);
-
-        takePictureBtn = (ImageButton) findViewById(R.id.ImageButton);
-        takePictureBtn.setOnClickListener(c -> {
-
-
+        //create onclick attributes for image button
+        imageButton = findViewById(R.id.imageButton3);
+        imageButton.setOnClickListener(click-> {
             Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-
-                myPictureTakerLauncher.launch(takePictureIntent);}
-
-        });
-        goToChatBtn = (Button) findViewById(R.id.GoToChatBtn);
-        goToChatBtn.setOnClickListener(c -> {
-            Intent goToChatPage = new Intent(ProfileActivity.this, ChatRoomActivity.class);
-            startActivityForResult(goToChatPage, 345);
-
+            if(takePictureIntent.resolveActivity(getPackageManager())!= null){
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+            }
         });
 
+        Intent nextActivity = new Intent(this, ChatRoomActivity.class);
+        chatButton = findViewById(R.id.button6);
+        chatButton.setOnClickListener(click-> startActivity(nextActivity));
 
-
+        Log.e(ACTIVITY_NAME, "In function: onCreate()");
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imageButton.setImageBitmap(imageBitmap);
+        }
+        Log.e(ACTIVITY_NAME, "In function: onActivityResult()");
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(TAG, "In function: onStart()");
+        Log.e(ACTIVITY_NAME, "In function: onStart()");
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.e(TAG, "In function: onStart()");
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.e(TAG, "In function: onStart()");
-    }
+
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(TAG, "In function: onStart()");
+        Log.e(ACTIVITY_NAME, "In function: onStart()");
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(TAG, "In function: onStart()");
+        Log.e(ACTIVITY_NAME, "In function: onDestroy()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e(ACTIVITY_NAME, "In function: onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(ACTIVITY_NAME, "In function: onPause()");
     }
 }

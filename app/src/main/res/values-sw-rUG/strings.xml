@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab1</string>
-    <string name="hello_message">Mumbo </string>
-    <string name="ButtonText">Meme Apa Button</string>
-    <string name= "header">Angalia GUI yangu</string>
-    <string name ="clickHere" > Bonyeza hapa</string>
-    <string name="checkhere">Angalia hii!</string>
-    <string name= "switchOn">Washa / zima</string>
-    <string name="type">Andika hapa</string>
+    <string name="app_name">Android Labs</string>
+    <string name="hello_message">Habari World</string>
+    <string name="ButtonText"> Bonyeza hapa</string>
+    <string name="CheckBoxText">Angalia hii!</string>
+    <string name="SwitchText">Washa/zima</string>
+    <string name="EditHint">Type Here</string>
     <string name="toast_message">Hapa kuna habari zaidi</string>
-    <string name="Lab3TextView1">Weka barua pepe yako:</string>
-    <string name="Lab3TextView2">Enter your password:</string>
-    <string name="Lab3EmailHint">Weka nenosiri lako:</string>
-    <string name="Lab3LoginBtnText">Ingia</string>
-    <string name="ProfileText">Wasifu wako</string>
-    <string name="NameText">Jina lako:</string>
-    <string name="NameHintText">Enter your name</string>
-    <string name="EmailTextViewText">Barua pepe yako:</string>
-    <string name="EmailHintText">Weka barua pepe yako</string>
-    <string name="PictureTextView">Picha yako:</string>
-    <string name="ImagePictureTextView">Bofya kitufe hapo juu ili kupiga picha</string>
-    <string name="GoToChatText">Nenda kwa Gumzo</string>
+    <string name="enter_email">Weka barua pepe yako:</string>
+    <string name="EmailHint">Andika barua pepe hapa</string>
+    <string name="enter_password">Andika nenosiri lako:</string>
+    <string name="Profile_text">Wasifu wako</string>
+    <string name="Name_hint">Ingiza jina lako</string>
+    <string name="Name_text">Jina lako:</string>
+    <string name="Email_text">Barua pepe yako:</string>
+    <string name="Picture_text">Picha yako:</string>
+    <string name="EmailHint2">Weka barua pepe yako</string>
+    <string name="ClickButtonText">Bofya kitufe hapo juu ili kupiga picha</string>
+    <string name="GoToChat">Nenda kwenye Chatroom</string>
+    <string name="Sendbtn">TUMA</string>
+    <string name="Receivebtn">POKEA</string>
+    <string name="delete">Je, ungependa kufuta hii?</string>
+    <string name="row">Safu iliyochaguliwa ni: </string>
+    <string name="database">Kitambulisho cha hifadhidata ni:</string>
+    <string name="yes">ndio</string>
+    <string name="no">Hapana</string>
+    <string name="todo">TODO</string>
     <string name="SendText">Tuma</string>
-    <string name="ReceiveText">Pokea</string>
+    <string name="ReceiveText">kupokea</string>
     <string name="ChatHint">Andika hapa</string>
+    <string name="clickHere"> Bonyeza hapa</string>
 
+    <string name="Lab3TextView1">Weka barua pepe yako:</string>
+    <string name="Lab3TextView2">Weka nenosiri lako:</string>
+    <string name="Lab3EmailHint">Andika barua pepe hapa:</string>
+    <string name="Lab3LoginBtnText">Ingia</string>
+
+
+    <string name="title_activity_login">Shughuli ya Kuingia</string>
+    <string name="prompt_email">Barua pepe</string>
+    <string name="prompt_password">Nenosiri</string>
+    <string name="action_sign_in">Ingia au jisajili</string>
+    <string name="action_sign_in_short">Weka sahihi</string>
+    <string name="welcome">"Karibu !"</string>
+    <string name="invalid_username">Si jina la mtumiaji halali</string>
+    <string name="invalid_password">Nenosiri lazima liwe na vibambo 5</string>
+    <string name="login_failed">"Imeshindikana kujiandikisha kuingia"</string>
 
 </resources>

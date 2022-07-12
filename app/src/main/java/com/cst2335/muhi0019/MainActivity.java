@@ -1,55 +1,59 @@
 package com.cst2335.muhi0019;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText emailField;
-    SharedPreferences sp;
-    Button loginBtn;
+    EditText email;
+    Button loginButton;
+    SharedPreferences prefs = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_lab3);
+        setContentView(R.layout.activity_main_profile);
 
-        emailField = (EditText)findViewById(R.id.Lab3editText2);
-        sp = getSharedPreferences("FileName", Context.MODE_PRIVATE);
-        String savedString = sp.getString("ReserveName", "Default value");
+        email = findViewById(R.id.editTextTextEmailAddress);
+        prefs = getSharedPreferences("FileName", Context.MODE_PRIVATE);
+        String savedString = prefs.getString("ReserveName", "Default Value");
+        email.setHint(savedString);
 
-        emailField.setHint(savedString);
-
-        loginBtn = (Button)findViewById(R.id.Lab3LoginBtn);
-        loginBtn.setOnClickListener( c -> {
-            Intent profilePage = new Intent(MainActivity.this, ProfileActivity.class);
-
-
-           Intent: profilePage.putExtra("emailTyped", emailField.getText().toString());
-            startActivity(profilePage);
+        //Creating a transition to load ProfileActivity
+        Intent nextActivity = new Intent(this, ProfileActivity.class);
+        //activating the button listener to start associated activity
+        loginButton = findViewById(R.id.button5);
+        loginButton.setOnClickListener(click-> {
+            nextActivity.putExtra("Email", email.getText().toString());
+            startActivity(nextActivity);
         });
+
     }
+
 
     @Override
     protected void onPause() {
         super.onPause();
 
         //get an editor object
-        SharedPreferences.Editor editor = sp.edit();
+        SharedPreferences.Editor editor = prefs.edit();
+        //save what was typed under the name "Reserve Name"
+        String wasTyped = email.getText().toString();
+        editor.putString("ReserveName", wasTyped);
 
-        //save what was typed under the name "ReserveName"
-        String whatWasTyped = emailField.getText().toString();
-        editor.putString("ReserveName", whatWasTyped);
-
-        //write it to disk:
-        editor.commit();
+        //write it to disk
+        editor.apply();
     }
 }
-
-
