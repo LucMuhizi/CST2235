@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="283dp"
+        android:layout_height="70dp"
+        android:text_size="30dp"
+
+        android:text="Message Here" />
+
+
+    <!-- create a hide button that is placed on the bottom of the page-->
+    <!--make the button go to the bottom of the page-->
+        android:layout_toStartOf="@+id/hideButton"
+        android:layout_toEndOf="@+id/hideButton"
+
+        android:text="Message Here" />
+
+</FrameLayout>

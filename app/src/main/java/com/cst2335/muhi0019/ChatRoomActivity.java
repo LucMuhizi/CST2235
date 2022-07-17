@@ -74,6 +74,16 @@ public class ChatRoomActivity extends AppCompatActivity {
 
             return false;
         }));
+
+
+        /*In the onCreate() function of your ChatRoom activity, use findViewById() to look for the
+id of the FrameLayout. If it returns null then you are on a phone, otherwise it’s on a
+tablet. Store this result in a Boolean variable 
+*/
+        boolean isTablet = findViewById(R.id.fragment_container) != null;
+       
+
+
     }
 
     //load data from the database and notify the adapter
