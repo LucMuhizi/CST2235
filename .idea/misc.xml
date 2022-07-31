@@ -11,10 +11,16 @@
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_chatroom.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_constraint.xml" value="0.13858695652173914" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_lab3.xml" value="0.13858695652173914" />
-        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_profile.xml" value="0.1875" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_profile.xml" value="0.5" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_receive.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_main_send.xml" value="0.1" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_message.xml" value="0.1905940594059406" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_message_repository.xml" value="0.1905940594059406" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_test_tool_bbar.xml" value="0.13636363636363635" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/activity_test_toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/drawer_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/header_layout.xml" value="0.1" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/row_receive.xml" value="0.1875" />
         <entry key="..\:/Users/Luc/Documents/GitHub/CST2235/app/src/main/res/layout/row_send.xml" value="0.1875" />
         <entry key="..\:/Users/muhiz/AndroidStudioProjects/AndroidLabs2/app/src/main/res/drawable-mcc256/drawable_ca.xml" value="0.1" />

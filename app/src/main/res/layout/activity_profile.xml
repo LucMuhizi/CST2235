@@ -65,4 +65,12 @@
         android:backgroundTint="#EA4545"
         android:text="@string/GoToChat" />
 
+
+    <Button
+        android:id="@+id/toolbarbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="@string/toolbarbutton" />
+
 </LinearLayout>

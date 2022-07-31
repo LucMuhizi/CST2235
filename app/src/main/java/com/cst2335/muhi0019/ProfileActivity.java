@@ -18,7 +18,7 @@ public class ProfileActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     ImageButton imageButton;
-    Button chatButton;
+    Button chatButton, toolbarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,11 @@ public class ProfileActivity extends AppCompatActivity {
         Intent nextActivity = new Intent(this, ChatRoomActivity.class);
         chatButton = findViewById(R.id.button6);
         chatButton.setOnClickListener(click-> startActivity(nextActivity));
+
+        Intent goToToolbar = new Intent(this, TestToolbar.class);
+        toolbarButton = findViewById(R.id.toolbarbtn);
+        toolbarButton.setOnClickListener( click -> startActivityForResult(goToToolbar, 1));
+
 
         Log.e(ACTIVITY_NAME, "In function: onCreate()");
     }
